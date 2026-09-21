@@ -36,12 +36,19 @@ public class ConsultaController {
     @FXML
     private TableColumn<Estudiante, LocalDate> colFechaNacimiento;
 
-    private ObservableList<Estudiante> estudiantes =
+    private static final ObservableList<Estudiante> estudiantes =
             FXCollections.observableArrayList();
+
+    public static ObservableList<Estudiante> getEstudiantes() {
+        return estudiantes;
+    }
+
+    public static void agregar(Estudiante estudiante) {
+        estudiantes.add(estudiante);
+    }
 
     @FXML
     public void initialize() {
-
         colCodigo.setCellValueFactory(new PropertyValueFactory<>("codigo"));
         colNombres.setCellValueFactory(new PropertyValueFactory<>("nombres"));
         colApellidos.setCellValueFactory(new PropertyValueFactory<>("apellidos"));
@@ -56,17 +63,14 @@ public class ConsultaController {
     }
 
     @FXML
-    private void regresar(ActionEvent event) throws IOException {
-
+    public void regresar(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/ni/uam/edu/estudiantes/principal-view.fxml")
+                getClass().getResource("/ni/edu/uam/examen/registro-view.fxml")
         );
-
         Parent root = loader.load();
-
         Stage stage = (Stage) tablaEstudiantes.getScene().getWindow();
-
         stage.setScene(new Scene(root));
+        stage.setTitle("Registro de Estudiante");
         stage.show();
     }
 }

@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="600.0" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #f8fafc;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.uam.edu.proyectonavegacion.controllers.RegistroController">
+<BorderPane maxHeight="600.0" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #f8fafc;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.examen.controllers.RegistroController">
     <top>
         <VBox BorderPane.alignment="CENTER">
             <children>
@@ -15,7 +15,8 @@
                         <Menu text="Archivo">
                             <items>
                                 <MenuItem onAction="#limpiarFormulario" text="Nuevo registro" />
-                                <MenuItem onAction="#guardarCliente" text="Guardar" />
+                                <MenuItem onAction="#guardarEstudiante" text="Guardar" />
+                                <MenuItem onAction="#abrirConsulta" text="Consultar Estudiantes" />
                             </items>
                         </Menu>
                         <Menu text="Ayuda">
@@ -87,24 +88,24 @@
                                 </VBox>
 
                                 <VBox spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                           <children>
+                                    <children>
                                         <Label text="Fecha de nacimiento:" textFill="#1f2937">
                                             <font>
                                                 <Font name="System Bold" size="13.0" />
                                             </font>
                                         </Label>
                                         <DatePicker fx:id="dpFechaNacimiento" prefHeight="35.0" prefWidth="9999.0" promptText="Seleccione fecha" />
-                           </children>
+                                    </children>
                                 </VBox>
 
                                 <VBox spacing="8.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
                                     <children>
-                                        <Label text="Carerra" textFill="#1f2937">
+                                        <Label text="Carrera" textFill="#1f2937">
                                             <font>
                                                 <Font name="System Bold" size="13.0" />
                                             </font>
                                         </Label>
-                                        <TextField fx:id="txtCiudad" prefHeight="35.0" promptText="Ingrese carerra" />
+                                        <TextField fx:id="txtCarrera" prefHeight="35.0" promptText="Ingrese carrera" />
                                     </children>
                                 </VBox>
 
@@ -142,14 +143,15 @@
     </center>
 
     <bottom>
-        <HBox alignment="CENTER_LEFT" prefHeight="10.0" prefWidth="864.0" spacing="600.0" style="-fx-background-color: #e2e8f0; -fx-padding: 8 18;" BorderPane.alignment="CENTER">
+        <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="900.0" style="-fx-background-color: #e2e8f0; -fx-padding: 8 18;" BorderPane.alignment="CENTER">
             <children>
                 <Label text="Sistema de Registro | UAM" textFill="#475569">
                     <font>
                         <Font size="12.0" />
                     </font>
                 </Label>
-                <Button mnemonicParsing="false" onAction="#volverAlMenu" style="-fx-background-color: #2563eb; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" text="Volver al Menú" />
+                <Region HBox.hgrow="ALWAYS" />
+                <Button mnemonicParsing="false" onAction="#abrirConsulta" style="-fx-background-color: #2563eb; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-padding: 8 16; -fx-background-radius: 6;" text="Ver Estudiantes" />
             </children>
         </HBox>
     </bottom>
