@@ -124,7 +124,6 @@
                                 <VBox alignment="CENTER" spacing="8.0">
                                     <children>
                                         <ImageView fx:id="imgFoto" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: #cbd5e1; -fx-border-radius: 8; -fx-background-color: #f1f5f9;" />
-                                        <Button onAction="#seleccionarImagen" style="-fx-background-color: #2563eb; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" text="Agregar fotografía" />
                                     </children>
                                 </VBox>
                             </children>
