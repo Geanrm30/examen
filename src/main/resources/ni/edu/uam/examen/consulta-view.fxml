@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ni.uam.edu.estudiantes.controllers.ConsultaController">
+
+    <VBox spacing="15.0"
+          AnchorPane.bottomAnchor="20.0"
+          AnchorPane.leftAnchor="20.0"
+          AnchorPane.rightAnchor="20.0"
+          AnchorPane.topAnchor="20.0">
+
+        <Label text="Lista de Estudiantes"
+               style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+        <TableView fx:id="tablaEstudiantes"
+                   VBox.vgrow="ALWAYS">
+
+            <columns>
+
+                <TableColumn fx:id="colCodigo"
+                             prefWidth="100.0"
+                             text="Código" />
+
+                <TableColumn fx:id="colNombres"
+                             prefWidth="150.0"
+                             text="Nombres" />
+
+                <TableColumn fx:id="colApellidos"
+                             prefWidth="150.0"
+                             text="Apellidos" />
+
+                <TableColumn fx:id="colCarrera"
+                             prefWidth="180.0"
+                             text="Carrera" />
+
+                <TableColumn fx:id="colFechaNacimiento"
+                             prefWidth="150.0"
+                             text="Fecha de nacimiento" />
+
+            </columns>
+
+        </TableView>
+
+        <Button mnemonicParsing="false"
+                onAction="#regresar"
+                text="Regresar" />
+
+    </VBox>
+
+</AnchorPane>

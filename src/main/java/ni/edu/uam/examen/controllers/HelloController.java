@@ -1,4 +1,4 @@
-package ni.edu.uam.examen;
+package ni.edu.uam.examen.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
